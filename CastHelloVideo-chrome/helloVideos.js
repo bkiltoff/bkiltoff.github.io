@@ -71,6 +71,7 @@ function initializeCastApi() {
   // default app ID to the default media receiver app
   // optional: you may change it to your own app ID/receiver
   var applicationIDs = [
+      'B7EF2E88', //my app id
       'BE6E4473', // hosted reference app
       chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID
     ];
