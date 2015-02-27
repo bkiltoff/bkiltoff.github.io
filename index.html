@@ -1,6 +1,23 @@
 <!doctype html>
-<body>
+<!-- Jquery from Google-->
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+c
+<body>c
 <h1>Hello, world.</h1>
 <p>i'm hosted with github pages.</p>
+<p id="p1"></p>
+
+<script>
+var boardID = "aOS4CWW3";
+var apiKey = "821653d6e0f6fe0cbf6908f058b13596";
+var secretToken = "6d78eee5baae66d007d30059c0d928978b27794779e0635b333d11771564617b";
+
+	$(document).ready(function(){
+	   $("#p1").load("https://api.trello.com/1/board/" + boardID + "?key = " + apiKey);
+	});
+
+</script>
 </body>
-</html>
+</html>c
