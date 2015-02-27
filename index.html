@@ -1,7 +1,10 @@
 <!doctype html>
-<!-- Jquery from Google-->
 <head>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+	<!-- Jquery from Google-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<!-- Trello API client library: client.js -->
+	<script src="https://api.trello.com/1/client.js?key=821653d6e0f6fe0cbf6908f058b13596" hidden="true"></script>
 </head>
 
 <body>
@@ -10,14 +13,7 @@
 <p id="p1"></p>
 
 <script>
-var boardID = "aOS4CWW3";
-var apiKey = "821653d6e0f6fe0cbf6908f058b13596";
-var secretToken = "6d78eee5baae66d007d30059c0d928978b27794779e0635b333d11771564617b";
-
-	$(document).ready(function(){
-	   $("#p1").load("https://api.trello.com/1/board/" + boardID + "?key = " + apiKey + "&token=" + secretToken);
-	});
-
+	Trello.authorize(type="popup")
 </script>
 </body>
 </html>
