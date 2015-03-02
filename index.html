@@ -16,9 +16,11 @@
 <script>
 $("#connectLink").click(function(){
 	Trello.authorize({
-				type: "popup", 
+				type: "redirect", 
 				name: "test app",
 				scope: { write: true, read: true},
+				expiration: "never",
+				interactive: "false"
 				})
 });
 
