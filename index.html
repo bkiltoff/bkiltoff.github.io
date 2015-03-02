@@ -10,11 +10,14 @@
 <body>
 <h1>Hello, world.</h1>
 <p>i'm hosted with github pages.</p>
+<a id="connectLink" href="#">Connect To Trello</a>
 <p id="p1"></p>
 
 <script>
+$("#connectLink").click(function(){
 	Trello.authorize({type: popup, 
 					name: test});
+});
 </script>
 </body>
 </html>
