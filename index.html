@@ -15,8 +15,12 @@
 
 <script>
 $("#connectLink").click(function(){
-	Trello.authorize({type: "popup", 
-					name: "test"});
+	Trello.authorize({
+				type: "popup", 
+				name: "test app",
+				scope: { write: true, read: true},
+				success: onAuthorize
+				})
 });
 
 </script>
