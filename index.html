@@ -11,7 +11,9 @@
 <h1>Hello, world.</h1>
 <p>i'm hosted with github pages.</p>
 <a id="connectLink" href="#">Connect To Trello</a>
-<p id="p1"></p>
+<br>
+<a id="getTest" href="#">Get Card</a>
+<div id="txt"></div>
 
 <script>
 $("#connectLink").click(function(){
@@ -22,6 +24,14 @@ $("#connectLink").click(function(){
 				expiration: "never",
 				interactive: "false"
 				})
+});
+
+$("#getTest").click(function(){
+	$("#txt").text(Trello.rest(
+		"GET",
+		"members/me",
+		{fields: "username,fullName"})
+	);
 });
 
 </script>
