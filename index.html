@@ -27,9 +27,9 @@ $("#connectLink").click(function(){
 });
 
 $("#getTest").click(function(){
-	$("#txt").text(Trello.get(
-		"members/me/username")
-	);
+	Trello.members.get("me", function(member){
+		$("#txt").text(member.fullName);
+	});
 });
 
 </script>
