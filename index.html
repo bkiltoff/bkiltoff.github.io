@@ -27,10 +27,8 @@ $("#connectLink").click(function(){
 });
 
 $("#getTest").click(function(){
-	$("#txt").text(Trello.rest(
-		"GET",
-		"members/me",
-		{fields: "username,fullName"})
+	$("#txt").text(Trello.get(
+		"members/me/cards")
 	);
 });
 
